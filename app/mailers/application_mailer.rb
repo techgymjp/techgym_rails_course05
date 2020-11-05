@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'noreply@mycontact.techgym'
+  default from: Settings.email
   layout 'mailer'
 end
