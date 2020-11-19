@@ -20,6 +20,8 @@
 # Learn more: http://github.com/javan/whenever
 require File.expand_path(File.dirname(__FILE__) + "/environment")
 
+set :output, "#{Rails.root}/log/whenever.log"
+
 set :environment, Rails.env
 
 every 1.minutes do
