@@ -2,8 +2,8 @@ namespace :contact_status do
   desc "1週間以上過ぎた未対応のお問い合わせを対応済みにする"
 
   task expire: :environment do
-    data_format = DateTime.current.strftime("%Y年%m月%d日 %H:%M:%S")
-    p "[#{data_format}] contact_status:expireが実行されました。"
+    date_format = DateTime.current.strftime("%Y年%m月%d日 %H:%M:%S")
+    p "[#{date_format}] contact_status:expireが実行されました。"
 
     change_ids = []
 
