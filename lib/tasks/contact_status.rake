@@ -3,9 +3,9 @@ namespace :contact_status do
 
   task expire: :environment do
     Contact.all.each do |contact|
-       if contact.yet? && contact.created_at < DateTime.current.ago(7.day)
-         contact.done!
-       end
+      if contact.yet? && contact.created_at < DateTime.current.ago(7.day)
+        contact.done!
+      end
     end
   end
 end
