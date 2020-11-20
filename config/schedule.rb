@@ -25,5 +25,6 @@ set :output, "#{Rails.root}/log/whenever.log"
 set :environment, Rails.env
 
 every 1.minutes do
+  rake 'contact_status:remind'
   rake 'contact_status:expire'
 end
