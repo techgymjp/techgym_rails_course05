@@ -17,6 +17,7 @@ gem 'i18n_generators', '~> 2.2', '>= 2.2.2'
 gem 'enum_help', '~> 0.0.17'
 gem 'config', '~> 2.2', '>= 2.2.1'
 gem 'whenever', '~> 1.0', require: false
+gem 'slack-notifier', '~> 2.3', '>= 2.3.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

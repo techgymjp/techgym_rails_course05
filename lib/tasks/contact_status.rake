@@ -18,4 +18,19 @@ namespace :contact_status do
       p "変更されたID: #{changed_ids.to_s}"
     end
   end
+
+  def send_message(message)
+    notifier = Slack::Notifier.new(
+      Rails.application.credentials.slack_webhook_url,
+      channel: '#general',
+      username: 'Techgym Rails'
+    )
+    notifier.ping message
+  end
+
+  desc "Slackに通知サンプルを送信する"
+
+  task send_message_sample: :environment do
+    send_message('通知サンプル')
+  end
 end
