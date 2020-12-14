@@ -44,7 +44,7 @@ namespace :contact_status do
 
     Contact.all.each do |contact|
       if contact.created_at < DateTime.current.ago(5.day) && contact.yet?
-        changed_urls << "#{Settings.domain}/admin/contacts/#{contact.id}"
+        changed_urls << "#{Settings.schema_and_domain}/admin/contacts/#{contact.id}"
       end
     end
     if changed_urls.any?
